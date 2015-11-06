@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCSliderViewCell"
+	x:Name="viewCell"
+	Height="70">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,7" 
+			RowSpacing="0" 
+			HorizontalOptions="Fill" 
+			VerticalOptions="Fill"
+			BackgroundColor="White">
+
+			<Grid.Resources>
+				<ResourceDictionary>
+        			<local:DoubleToIntValueConverter x:Key="converter" />
+        		</ResourceDictionary>
+        	</Grid.Resources>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="30" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="25" />
+			</Grid.ColumnDefinitions>
+
+			<local:LabelBoldFont
+				Grid.Row="0"
+				Grid.Column="0"
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<Slider
+				Grid.Row="1"
+				Grid.Column="0"
+				x:Name="_slider"
+				BindingContext="{x:Reference viewCell}"
+				Value="{Binding Value, Mode=TwoWay}"
+				Maximum="10"
+				Minimum="0"
+				HorizontalOptions="FillAndExpand"/>
+
+			<local:LabelRegularFont
+				Grid.Row="1"
+				Grid.Column="1"
+				BindingContext="{x:Reference _slider}"
+				Text="{Binding Value, Converter={StaticResource converter}}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				XAlign="Center"
+				FontSize="14" />
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

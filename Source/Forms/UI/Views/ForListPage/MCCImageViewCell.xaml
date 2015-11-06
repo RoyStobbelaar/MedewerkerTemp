@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCImageViewCell"
+	Height="55"
+	x:Name="viewCell">
+
+	<ViewCell.View>
+
+		<Grid
+			Padding="15,7,15,7" 
+			ColumnSpacing="10"
+			HorizontalOptions="FillAndExpand" 
+			VerticalOptions="Center"
+			BackgroundColor="White">
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="25" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="27" />
+			</Grid.ColumnDefinitions>
+
+<!--			<Grid.GestureRecognizers>
+        		<TapGestureRecognizer
+        			BindingContext="{x:Reference viewCell}"
+        			Command="{Binding Command}"/>
+    		</Grid.GestureRecognizers>-->
+
+			<Image
+				Grid.Column="0"
+				HorizontalOptions="FillAndExpand"
+				BindingContext="{x:Reference viewCell}"
+				Source="{Binding Source}"
+				BackgroundColor="Transparent"
+				Aspect="AspectFit"/>
+
+			<local:LabelRegularFont
+				Grid.Column="1"
+				x:Name="labelText"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Text}"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="16"/>
+
+			<Image
+				Grid.Column="2"
+				HorizontalOptions="FillAndExpand"
+				Source="meer"
+				BackgroundColor="Transparent"
+				Aspect="AspectFit"/>
+
+		</Grid>
+
+	</ViewCell.View>
+
+</ViewCell>

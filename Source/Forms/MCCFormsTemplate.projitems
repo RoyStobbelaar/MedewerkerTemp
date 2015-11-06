@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{97D6BEE0-AD32-43C6-A42A-BBD02D2CE7F3}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MCCForms</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\StringConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\EncryptionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DatabaseHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\EditorRegularFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\EntryRegularFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\LabelBoldFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\LabelItalicFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\LabelRegularFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\ColorThemes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\AppConfigConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\GPSCoordinatesResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\DocumentConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\AppLockHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\MediaPickerHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\SslValidator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DatabaseHelper.Connection.cs">
+      <DependentUpon>DatabaseHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DatabaseHelper.Queries.cs">
+      <DependentUpon>DatabaseHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Setting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IDocumentsPath.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IGPSCoordinates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IMediaPicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IPiwikAnalytics.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IReachability.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\ISecurity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\MessageVisualizerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\NavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IFingerprintAuthentication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PincodeValidationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\DeviceTypeHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\DateToNLStringFormatConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IDeviceInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\DoubleToIntValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\FilesystemHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\IDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AppResetViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\GoogleCoordHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AddressResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverters\PathToImageSourceConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\HttpHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\HttpHelper.Requests.cs">
+      <DependentUpon>HttpHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\PiwikAnalyticsHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FilePathIV.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\StorageConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoginViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TokenResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\TokenHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\AppResetPage.xaml.cs">
+      <DependentUpon>..\..\Pages\AppResetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\BackgroundEnteredPage.cs">
+      <DependentUpon>..\..\Pages\BackgroundEnteredPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\ImageViewerPage.xaml.cs">
+      <DependentUpon>..\..\Pages\ImageViewerPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\LocationDeterminationPage.xaml.cs">
+      <DependentUpon>..\..\Pages\LocationDeterminationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\LoginPage.xaml.cs">
+      <DependentUpon>..\..\Pages\LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\PincodePage.xaml.cs">
+      <DependentUpon>..\..\Views\Pages\PincodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\SettingsPage.xaml.cs">
+      <DependentUpon>..\..\Pages\SettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\WebViewPage.xaml.cs">
+      <DependentUpon>..\..\Pages\WebViewPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\Base\MCCBaseTitleViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\BindablePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCDatePickerWithTitleViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCDatePickerWithTitleViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCDescriptionWithImageViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCDescriptionWithImageViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCEntryViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCEntryViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCEntryWithoutTitleViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCEntryWithoutTitleViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCPickerWithTitleViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCPickerWithTitleViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSelectImageViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCSelectImageViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSliderViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCSliderViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSwitchViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCSwitchViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCWizardFooterViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCWizardFooterViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCWizardHeaderViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForEditPage\MCCWizardHeaderViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCDetailViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForListPage\MCCDetailViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCImageViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForListPage\MCCImageViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCStandardViewCell.xaml.cs">
+      <DependentUpon>..\..\..\Pages\Views\ForListPage\MCCStandardViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForPincodePage\NavigationButton\NavigationInfoButtonLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForPincodePage\NumberPad\ButtonNumberPad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForPincodePage\NumberPad\GridNumberPad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForPincodePage\PinRow\GridPinTiles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForPincodePage\PinRow\PinTile.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Demonstration\PasswordObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Demonstration\RssFeedItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\ItemEditPage.xaml.cs">
+      <DependentUpon>ItemEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\ItemListPage.xaml.cs">
+      <DependentUpon>ItemListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\RssFeedPage.xaml.cs">
+      <DependentUpon>..\..\..\Pages\RssFeedPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\TabBarPage.xaml.cs">
+      <DependentUpon>TabBarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Demonstration\ItemEditViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Demonstration\ItemListViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Demonstration\RssFeedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Pages\InfoPage.xaml.cs">
+      <DependentUpon>InfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Collector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Visitor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCTimePickerWithTitleViewCell.xaml.cs">
+      <DependentUpon>MCCTimePickerWithTitleViewCell.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Constants\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DependencyServices\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\ForCustomRenderers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)DependencyServices\Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Base\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ValueConverters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)UI\" />
+    <Folder Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\Demonstration\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\Demonstration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\AppResetPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\BackgroundEnteredPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\ImageViewerPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\LocationDeterminationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\LoginPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\PincodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\WebViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCDatePickerWithTitleViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCDescriptionWithImageViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCEntryViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCEntryWithoutTitleViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCPickerWithTitleViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSelectImageViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSliderViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCSwitchViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCWizardFooterViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCWizardHeaderViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCDetailViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCImageViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForListPage\MCCStandardViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\ItemEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\ItemListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\RssFeedPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\Demonstration\TabBarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Pages\InfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)UI\Views\ForEditPage\MCCTimePickerWithTitleViewCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

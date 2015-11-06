@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.InfoPage"
+	BackgroundColor="{DynamicResource ColorPageBackground}">
+
+	<ContentPage.Content>
+
+		<StackLayout
+			Padding="0"
+			Spacing="0">
+
+			<!-- Header layout -->
+			<Grid
+				x:Name="gridBackground"
+			  	RowSpacing="0"
+			  	ColumnSpacing="0">
+			 
+	    		<Grid.RowDefinitions>
+	      			<RowDefinition Height="65" />
+	      			<RowDefinition Height="*" />
+	    		</Grid.RowDefinitions>
+
+	    		<Grid.ColumnDefinitions>
+	      			<ColumnDefinition Width="*" />
+	    		</Grid.ColumnDefinitions>
+
+				<StackLayout 
+					Grid.Row="0" Grid.Column="0"
+					HorizontalOptions="FillAndExpand"
+					BackgroundColor="White">
+				
+					<StackLayout
+						VerticalOptions="FillAndExpand"
+						Padding = "20"
+						HorizontalOptions="Center"
+						Orientation="Horizontal"
+						WidthRequest="410">
+
+						<local:LabelRegularFont
+							x:Name="labelHeaderTitle"
+							Text="Informatie"
+	             			VerticalOptions="FillAndExpand"
+	             			HorizontalOptions="FillAndExpand"
+	             			XAlign="Start"
+	             			YAlign="Center"
+	             			FontSize="36"
+	             			TextColor="Black"/>
+
+	             		<local:NavigationInfoButtonLayout
+							x:Name="navigationButtonLayout"
+							VerticalOptions="FillAndExpand"
+							HorizontalOptions="Fill"/>
+
+					</StackLayout>
+
+				</StackLayout>
+
+			</Grid>
+
+
+
+			<!-- Content layout -->
+			<StackLayout
+				Padding="20"
+				VerticalOptions="FillAndExpand"
+				HorizontalOptions="Center"
+				WidthRequest="410">
+
+				<local:LabelRegularFont
+					x:Name="labelInfo"
+					TextColor="Black"
+					FontSize="14"/>
+
+			</StackLayout>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

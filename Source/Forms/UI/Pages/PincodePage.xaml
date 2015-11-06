@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.PincodePage">
+
+	<ContentPage.Content>
+
+		<Grid
+			x:Name="gridBackground"
+		  	RowSpacing="0"
+		  	ColumnSpacing="0">
+		 
+    		<Grid.RowDefinitions>
+      			<RowDefinition Height="65" />
+      			<RowDefinition Height="*" />
+    		</Grid.RowDefinitions>
+
+    		<Grid.ColumnDefinitions>
+      			<ColumnDefinition Width="*" />
+    		</Grid.ColumnDefinitions>
+
+			<StackLayout 
+				Grid.Row="0" Grid.Column="0"
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="White">
+
+				<!-- Header layout -->
+				<StackLayout
+					VerticalOptions="FillAndExpand"
+					Padding = "20"
+					HorizontalOptions="Center"
+					Orientation="Horizontal"
+					WidthRequest="410">
+
+					<local:LabelRegularFont
+						x:Name="labelHeaderTitle"
+             			VerticalOptions="FillAndExpand"
+             			HorizontalOptions="FillAndExpand"
+             			XAlign="Start"
+             			YAlign="Center"
+             			FontSize="36"
+             			TextColor="Black"/>
+
+             		<local:NavigationInfoButtonLayout
+						x:Name="navigationInfoButtonLayout"
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="Fill"/>
+
+				</StackLayout>
+
+			</StackLayout>
+		
+			<StackLayout
+				Grid.Row="1" Grid.Column="0"
+				VerticalOptions="FillAndExpand"
+				HorizontalOptions="FillAndExpand">
+
+				<!-- Content layout -->
+				<StackLayout
+					VerticalOptions="FillAndExpand"
+					HorizontalOptions="Center"
+					WidthRequest="450">
+
+					<!-- pin tiles -->
+					<StackLayout 
+						VerticalOptions="Fill"
+						HorizontalOptions="FillAndExpand"
+						Padding="20"
+						Spacing="10">
+
+						<local:LabelRegularFont
+							x:Name="labelEnterPin"
+             				VerticalOptions="FillAndExpand"
+             				HeightRequest="30"
+             				YAlign="Center"
+             				Text="Voer een pincode in"/>
+             				<local:GridPinTiles
+             					x:Name="gridPinTiles1"/>
+
+             			<local:LabelRegularFont
+							x:Name="labelReEnterPin"
+             				VerticalOptions="FillAndExpand"
+             				HeightRequest="30"
+             				YAlign="Center"
+             				Text="Bevestig pincode"/>
+
+             			<local:GridPinTiles
+             				x:Name="gridPinTiles2"/>
+
+             		</StackLayout>
+
+             		<!-- empty space -->
+             		<StackLayout 
+						VerticalOptions="FillAndExpand"
+						HorizontalOptions="FillAndExpand"/>
+
+					<!-- number pad -->
+					<StackLayout 
+						x:Name="layoutNumberPad"
+						VerticalOptions="Fill"
+						HorizontalOptions="FillAndExpand">
+             				<local:GridNumberPad/>
+
+					</StackLayout>
+
+				</StackLayout>
+			
+			</StackLayout>
+
+		</Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>

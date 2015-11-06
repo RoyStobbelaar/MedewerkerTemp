@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{B1287E4D-C3C7-41C0-A34F-9684817ECB8B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MCCForms.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MCCForms</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchLink>None</MtouchLink>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseThumb>true</MtouchUseThumb>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IpaIncludeArtwork>true</IpaIncludeArtwork>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignProvision>736a43a2-f6cd-4476-b1c8-a9ade84879fa</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Mono.Data.Sqlcipher">
+      <HintPath>..\Components\sqlcipher-for-xamarin-ios-3.3.0.0\lib\ios-unified\Mono.Data.Sqlcipher.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.1\lib\Xamarin.iOS10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="PLCrashReporterUnifiedBinding">
+      <HintPath>..\packages\Xamarin.Insights.1.11.1\lib\Xamarin.iOS10\PLCrashReporterUnifiedBinding.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps.iOS">
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Maps.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Maps">
+      <HintPath>..\packages\Xamarin.Forms.Maps.1.5.0.6447\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.7\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Icon-60%403x.png" />
+    <BundleResource Include="Resources\Icon-Small%403x.png" />
+    <BundleResource Include="Resources\Icon-Small-40%403x.png" />
+    <BundleResource Include="..\..\Assets\Common\Fonts\RijksoverheidSansTextTT-Bold_2_0.ttf">
+      <Link>Resources\RijksoverheidSansTextTT-Bold_2_0.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\Common\Fonts\RijksoverheidSansTextTT-Italic_2_0.ttf">
+      <Link>Resources\RijksoverheidSansTextTT-Italic_2_0.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\Common\Fonts\RijksoverheidSansTextTT-Regular_2_0.ttf">
+      <Link>Resources\RijksoverheidSansTextTT-Regular_2_0.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\Common\Images\Backspace.png">
+      <Link>Resources\Backspace.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\vraagteken.png">
+      <Link>Resources\vraagteken.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\vraagteken%402x.png">
+      <Link>Resources\vraagteken%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\Common\Images\MCC_Logo.png">
+      <Link>Resources\MCC_Logo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\info.png">
+      <Link>Resources\info.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\info%402x.png">
+      <Link>Resources\info%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\locatie.png">
+      <Link>Resources\locatie.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\locatie%402x.png">
+      <Link>Resources\locatie%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\toevoegen.png">
+      <Link>Resources\toevoegen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\toevoegen%402x.png">
+      <Link>Resources\toevoegen%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\datum.png">
+      <Link>Resources\datum.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\datum%402x.png">
+      <Link>Resources\datum%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\meer.png">
+      <Link>Resources\meer.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\meer%402x.png">
+      <Link>Resources\meer%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\Common\Images\fototoevoegen.png">
+      <Link>Resources\fototoevoegen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\sluiten.png">
+      <Link>Resources\sluiten.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\sluiten%402x.png">
+      <Link>Resources\sluiten%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\key.png">
+      <Link>Resources\key.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\key%402x.png">
+      <Link>Resources\key%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\instellingen.png">
+      <Link>Resources\instellingen.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\instellingen%402x.png">
+      <Link>Resources\instellingen%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\rss.png">
+      <Link>Resources\rss.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\Assets\iOSSpecific\Images\rss%402x.png">
+      <Link>Resources\rss%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="Settings.bundle\Root.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="SplashScreen.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="DependencyServicesImpl\PiwikAnalytics_iOS.cs" />
+    <Compile Include="CustomRenderers\LabelBoldFontCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\LabelItalicFontCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\LabelRegularFontCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\NavigationCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\EntryRegularFontCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\EditorRegularFontCustomRenderer.cs" />
+    <Compile Include="DependencyServicesImpl\Reachability_iOS.cs" />
+    <Compile Include="DependencyServicesImpl\GPSCoordinates_iOS.cs" />
+    <Compile Include="DependencyServicesImpl\DocumentsPath_iOS.cs" />
+    <Compile Include="DependencyServicesImpl\MediaPicker_iOS.cs" />
+    <Compile Include="DependencyServicesImpl\FingerprintAuthentication_iOS.cs" />
+    <Compile Include="CustomRenderers\TextCellRegularFontCustomRenderer.cs" />
+    <Compile Include="DependencyServicesImpl\DeviceAndAppInformation_iOS.cs" />
+    <Compile Include="CustomRenderers\TabbedPageCustomRenderer.cs" />
+    <Compile Include="DependencyServicesImpl\Dialog_iOS.cs" />
+    <Compile Include="Views\LoadingOverlay.cs" />
+    <Compile Include="CustomRenderers\ButtonCustomRenderer.cs" />
+    <Compile Include="CustomRenderers\TableViewCustomRenderer.cs" />
+    <Compile Include="Helpers\KeyChainHelper.cs" />
+    <Compile Include="DependencyServicesImpl\Security_iOS.cs" />
+    <Compile Include="Helpers\VersionHelper.cs" />
+  </ItemGroup>
+  <Import Project="..\Forms\MCCFormsTemplate.projitems" Label="Shared" Condition="Exists('..\Forms\MCCFormsTemplate.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.1\build\Xamarin.iOS10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.1\build\Xamarin.iOS10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6447\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+  <ItemGroup>
+    <XamarinComponentReference Include="sqlcipher-for-xamarin-ios">
+      <Version>3.3.0.0</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamarin.mobile">
+      <Version>0.7.7</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Spotlight-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Spotlight-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PiwikProjects\Piwik.iOS\Piwik.iOS.csproj">
+      <Project>{FC0E5309-F0FB-4420-9349-D0EE8ABD695B}</Project>
+      <Name>Piwik.iOS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependencyServicesImpl\" />
+    <Folder Include="CustomRenderers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Settings.bundle\" />
+  </ItemGroup>
+</Project>

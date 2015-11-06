@@ -1,0 +1,3 @@
+﻿<resources>
+  <style name="MyLightTheme" parent="@android:style/Theme.Holo.Light"/>
+</resources>

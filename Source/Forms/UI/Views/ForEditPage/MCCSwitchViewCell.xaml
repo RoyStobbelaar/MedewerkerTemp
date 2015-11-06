@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCSwitchViewCell"
+	x:Name="viewCell"
+	Height="60">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,7" 
+			RowSpacing="0" 
+			HorizontalOptions="Fill" 
+			VerticalOptions="Fill"
+			BackgroundColor="White">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="100" />
+			</Grid.ColumnDefinitions>
+
+			<local:LabelBoldFont
+				Grid.Row="0"
+				Grid.Column="0"
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<local:LabelRegularFont
+				Grid.Row="1"
+				Grid.Column="0"
+				x:Name="labelSubtitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Subtitle}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14"
+				TextColor="Gray" />
+
+			<Switch
+				x:Name="_switchToToggle"
+				HorizontalOptions="End"
+				VerticalOptions="Center"
+				BindingContext="{x:Reference viewCell}"
+				IsToggled="{Binding IsToggled}"
+				Grid.Row="0"
+				Grid.Column="1"
+				Grid.RowSpan="2"/>
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

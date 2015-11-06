@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCSelectImageViewCell"
+	x:Name="viewCell"
+	Height="115">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,15" 
+			RowSpacing="5" 
+			ColumnSpacing="10"
+			HorizontalOptions="Fill" 
+			VerticalOptions="Fill"
+			BackgroundColor="White">
+
+			<Grid.Resources>
+				<ResourceDictionary>
+        			<local:PathToImageSourceConverter x:Key="converter" />
+        		</ResourceDictionary>
+        	</Grid.Resources>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="63" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="63" />
+				<ColumnDefinition Width="63" />
+				<ColumnDefinition Width="63" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<local:LabelBoldFont
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				Grid.Row="0"
+				Grid.Column="0"
+				Grid.ColumnSpan="4"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<Image
+				x:Name="_imageView1"
+				Grid.Row="1"
+				Grid.Column="0"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BindingContext="{x:Reference viewCell}"
+				Source="{Binding PathToImage1, Converter={StaticResource converter}}"
+				Aspect="AspectFill">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+			<!--placeholder image-->
+			<Image
+				x:Name="_imageView1Placeholder"
+				Grid.Row="1"
+				Grid.Column="0"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BindingContext="{x:Reference viewCell}"
+				Source="fototoevoegen.png"
+				Aspect="AspectFill"
+				IsVisible="{Binding ShowPlaceholder1}">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+			<Image
+				x:Name="_imageView2"
+				Grid.Row="1"
+				Grid.Column="1"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BackgroundColor="Transparent"
+				BindingContext="{x:Reference viewCell}"
+				Source="{Binding PathToImage2, Converter={StaticResource converter}}"
+				Aspect="AspectFill">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer 
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+			<!--placeholder image-->
+			<Image
+				x:Name="_imageView2Placeholder"
+				Grid.Row="1"
+				Grid.Column="1"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BindingContext="{x:Reference viewCell}"
+				Source="fototoevoegen.png"
+				Aspect="AspectFill"
+				IsVisible="{Binding ShowPlaceholder2}">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+			<Image
+				x:Name="_imageView3"
+				Grid.Row="1"
+				Grid.Column="2"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BackgroundColor="Transparent"
+				BindingContext="{x:Reference viewCell}"
+				Source="{Binding PathToImage3, Converter={StaticResource converter}}"
+				Aspect="AspectFill">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer 
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+			<!--placeholder image-->
+			<Image
+				x:Name="_imageView3Placeholder"
+				Grid.Row="1"
+				Grid.Column="2"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"
+				BindingContext="{x:Reference viewCell}"
+				Source="fototoevoegen.png"
+				Aspect="AspectFill"
+				IsVisible="{Binding ShowPlaceholder3}">
+
+				<Image.GestureRecognizers>
+        			<TapGestureRecognizer
+        				Tapped="_imageViewTapped"/>
+    			</Image.GestureRecognizers>
+
+			</Image>
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

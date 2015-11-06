@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCEntryWithoutTitleViewCell"
+	x:Name="viewCell"
+	Height="60">
+
+	<ViewCell.View>
+
+		<StackLayout
+			Padding="15,7,15,7"
+			VerticalOptions="Center"
+			HorizontalOptions="Fill"
+			BackgroundColor="White">
+
+			<local:EntryRegularFont
+				x:Name="entryValue"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Value, Mode=TwoWay}"
+				HorizontalOptions="Fill"
+				VerticalOptions="FillAndExpand"
+				TextColor="Black" />
+
+			</StackLayout>
+
+	</ViewCell.View>
+
+</ViewCell>

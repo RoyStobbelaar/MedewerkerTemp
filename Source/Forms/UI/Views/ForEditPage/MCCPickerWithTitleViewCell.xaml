@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCPickerWithTitleViewCell"
+	x:Name="viewCell"
+	Height="60">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,7" 
+			RowSpacing="5" 
+			HorizontalOptions="Fill" 
+			VerticalOptions="Fill"
+			BackgroundColor="White">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<local:LabelBoldFont
+				Grid.Row="0"
+				Grid.Column="0"
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<local:BindablePicker
+				Grid.Row="1"
+				Grid.Column="0"
+				x:Name="picker"
+				BindingContext="{x:Reference viewCell}"
+				ItemsSource="{Binding Items}"
+				SelectedItem="{Binding Value, Mode=TwoWay}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				BackgroundColor="White"
+				IsVisible="false" />
+
+			<local:EntryRegularFont
+				Grid.Row="1"
+				Grid.Column="0"
+				x:Name="labelValue"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Value}"
+				Placeholder="{Binding Placeholder}"
+				TextColor="Black"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="Fill"
+				IsEnabled="false" />
+
+			<!-- Ugly bug fix to get it work on Android -->
+			<Button
+				Grid.Row="0"
+				Grid.Column="0"
+				Grid.RowSpan="2"
+				x:Name="buttonFocus"
+				BackgroundColor="Transparent"
+				HorizontalOptions="FillAndExpand"
+				VerticalOptions="FillAndExpand"/>
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="sqlcipher-for-xamarin-android">
+  <name>SQLCipher Android</name>
+  <publisher>Zetetic LLC</publisher>
+  <publisher-url>https://www.zetetic.net/sqlcipher/</publisher-url>
+  <version>3.3.0.0</version>
+  <summary>Full database encryption using 256-bit AES.</summary>
+  <samples>
+    <sample id="sqlcipher-monodroid-demo">
+      <name>SQLCipher for Android Demo</name>
+      <summary>SQLCipher for Android Demo</summary>
+    </sample>
+  </samples>
+</component>

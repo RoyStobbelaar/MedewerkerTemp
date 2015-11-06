@@ -1,0 +1,12 @@
+﻿<resources>
+  <style name="MyLightTheme" parent="@android:style/Theme.Material.Light">
+
+  	<!-- status bar color-->
+  	<item name="android:colorPrimaryDark">@color/ColorToolbarBackground</item>
+
+  	<!-- navigation bar color-->
+	<!-- <item name="android:navigationBarColor">@color/ColorPageBackground</item>-->
+
+ </style>
+
+</resources>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	x:Class="MCCForms.BackgroundEnteredPage"
+	BackgroundColor="{DynamicResource ColorPageBackground}">
+
+	<ContentPage.Content>
+
+		<StackLayout
+			VerticalOptions="Center"
+			HorizontalOptions="Center">
+
+			<Image
+				VerticalOptions="Fill"
+				HorizontalOptions="Fill"
+				Aspect="AspectFit"
+				Source="MCC_Logo.png"/>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

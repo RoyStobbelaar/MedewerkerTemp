@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.LoginPage"
+	BackgroundColor="{DynamicResource ColorPageBackground}">
+
+	<ContentPage.Content>
+
+	<StackLayout
+			x:Name="masterLayout"
+			Padding="0"
+			Spacing="0">
+
+			<!-- Header layout -->
+			<Grid
+				x:Name="gridBackground"
+			  	RowSpacing="0"
+			  	ColumnSpacing="0">
+			 
+	    		<Grid.RowDefinitions>
+	      			<RowDefinition Height="65" />
+	      			<RowDefinition Height="*" />
+	    		</Grid.RowDefinitions>
+
+	    		<Grid.ColumnDefinitions>
+	      			<ColumnDefinition Width="*" />
+	    		</Grid.ColumnDefinitions>
+
+				<StackLayout 
+					Grid.Row="0" Grid.Column="0"
+					HorizontalOptions="FillAndExpand"
+					BackgroundColor="White">
+				
+					<StackLayout
+						VerticalOptions="EndAndExpand"
+						HorizontalOptions="Center"
+						WidthRequest="410">
+
+						<StackLayout
+							Padding = "15"
+							BackgroundColor="White"
+							Orientation="Horizontal">
+							
+							<local:LabelRegularFont
+								x:Name="labelHeaderTitle"
+								Text="Inloggen"
+		             			VerticalOptions="FillAndExpand"
+		             			HorizontalOptions="FillAndExpand"
+		             			XAlign="Start"
+		             			YAlign="Center"
+		             			FontSize="36"
+		             			TextColor="Black"/>
+
+		             		<local:NavigationInfoButtonLayout
+								x:Name="navigationButtonLayout"
+								VerticalOptions="FillAndExpand"
+								HorizontalOptions="Fill"/>
+
+						</StackLayout>
+
+					</StackLayout>
+
+				</StackLayout>
+
+			</Grid>
+
+			<!-- Content layout -->
+			<ScrollView 
+				x:Name="scrollView"
+				Padding="0"
+				Orientation="Vertical" 
+				HorizontalOptions="Center"
+				VerticalOptions="FillAndExpand"
+				WidthRequest="410">
+
+				<StackLayout
+					Spacing="1"
+					VerticalOptions="FillAndExpand">
+
+					<Grid
+						Padding="15">
+						<local:LabelRegularFont
+							x:Name="labelInfo"
+							Text="{Binding InformationText}"
+							TextColor="Black"
+							FontSize="14"/>
+					</Grid>
+
+					<Grid
+						x:Name="gridUserName"
+						Padding="15,10,15,3" 
+						RowSpacing="0" 
+						HorizontalOptions="Fill" 
+						VerticalOptions="Center"
+						BackgroundColor="White">
+
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="30" />
+						</Grid.RowDefinitions>
+
+						<local:LabelBoldFont
+							Grid.Row="0"
+							x:Name="labelUsername"
+							Text="Gebruikersnaam *"
+							HorizontalOptions="Fill"
+							VerticalOptions="Fill"
+							YAlign="Center"
+							LineBreakMode="TailTruncation"
+							FontSize="14" />
+
+						<local:EntryRegularFont
+							Grid.Row="1"
+							x:Name="entryUsername"
+							Text="{Binding Username}"
+							Placeholder="Vul uw gebruikersnaam in"
+							TextColor="Black"
+							HorizontalOptions="Fill"
+							VerticalOptions="Fill" />
+					</Grid>
+
+					<Grid
+						x:Name="gridPassword"
+						Padding="15,10,15,3" 
+						RowSpacing="0" 
+						HorizontalOptions="Fill" 
+						VerticalOptions="Center"
+						BackgroundColor="White">
+
+						<Grid.RowDefinitions>
+							<RowDefinition Height="*" />
+							<RowDefinition Height="30" />
+						</Grid.RowDefinitions>
+
+						<local:LabelBoldFont
+							Grid.Row="0"
+							x:Name="labelPassword"
+							Text="Wachtwoord *"
+							HorizontalOptions="Fill"
+							VerticalOptions="Fill"
+							YAlign="Center"
+							LineBreakMode="TailTruncation"
+							FontSize="14" />
+
+						<local:EntryRegularFont
+							Grid.Row="1"
+							x:Name="entryPassword"
+							Text="{Binding Password}"
+							Placeholder="Vul uw wachtwoord in"
+							TextColor="Black"
+							HorizontalOptions="Fill"
+							VerticalOptions="Fill" />
+					</Grid>
+
+					<StackLayout
+						x:Name="layoutButtonHolder"
+						Padding="10,10,10,20"
+						VerticalOptions="EndAndExpand"
+						HorizontalOptions="Fill">
+
+						<Button
+							x:Name="buttonLogin"
+							Text="Opslaan"
+							Command="{Binding LoginCommand}"
+							HorizontalOptions="Fill"
+							HeightRequest="35"
+							TextColor="White"
+							BackgroundColor="{DynamicResource ColorButton}"
+							FontSize="15"/>
+
+					</StackLayout>
+
+				</StackLayout>
+
+			</ScrollView>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

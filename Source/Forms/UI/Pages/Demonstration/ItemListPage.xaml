@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.ItemListPage" 
+	BackgroundColor="White" 
+	Title="Afspraken"
+	x:Name="contentPage">
+
+	<ContentPage.ToolbarItems>
+
+		<ToolbarItem
+			Name= "Instellingen"
+			Icon="instellingen"
+			Command="{Binding OpenSettingsPageCommand}"/>
+
+		<ToolbarItem
+        	Name= "Nieuw"
+        	Icon="toevoegen"
+        	Command="{Binding OpenItemEditPageCommand}"/>
+
+   	</ContentPage.ToolbarItems>
+
+	<ContentPage.Content>
+
+		<StackLayout Spacing="0">
+
+		<!--
+			<SearchBar
+				Placeholder="Zoek" 
+				CancelButtonColor="Black" 
+				Text="{Binding SearchText}" 
+				BackgroundColor="{DynamicResource ColorSearchbar}" />
+				-->
+			<ListView 
+				x:Name="itemListView"
+				SeparatorColor="Silver"
+				HasUnevenRows="true"
+				ItemsSource="{Binding appointments}"
+				IsPullToRefreshEnabled="true"
+				IsRefreshing="{Binding IsRefreshing}"
+				RefreshCommand="{Binding RefreshCommand}"
+				SelectedItem="{Binding SelectedAppointment, Mode=TwoWay}">
+
+				<ListView.ItemTemplate>
+
+					<DataTemplate>
+
+						<local:MCCImageViewCell
+							Text="{Binding Locatie}"
+							Source="key">
+
+							<ViewCell.ContextActions>
+           						
+            					<MenuItem 
+        							Clicked="OnDeleteItemClick"
+               						Text="Verwijder" 
+               						IsDestructive="True" />
+
+         					</ViewCell.ContextActions>
+
+						</local:MCCImageViewCell>
+
+					</DataTemplate>
+
+				</ListView.ItemTemplate>
+
+			</ListView>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

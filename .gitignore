@@ -1,0 +1,9 @@
+Source/Droid/obj
+Source/iOS/bin
+Source/iOS/obj
+Source/Droid/bin
+*.userprefs
+Source/PiwikProjects/Piwik.Android/obj
+Source/PiwikProjects/Piwik.iOS/obj
+Source/PiwikProjects/Piwik.iOS/bin
+Source/PiwikProjects/Piwik.Android/bin

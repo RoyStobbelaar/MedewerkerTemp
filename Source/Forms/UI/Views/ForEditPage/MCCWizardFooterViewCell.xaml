@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCWizardFooterViewCell"
+	Height="60"
+	x:Name="viewCell">
+
+	<ViewCell.View>
+		
+		<StackLayout
+				BackgroundColor="{DynamicResource ColorPageBackground}"
+				Padding="15, 10, 15, 20"
+				VerticalOptions="Fill"
+				HorizontalOptions="Fill">
+
+				<Button
+					x:Name="button"
+					BindingContext="{x:Reference viewCell}"
+					Text="{Binding Text}"
+					Command="{Binding Command}"
+					HorizontalOptions="Fill"
+					HeightRequest="35"
+					TextColor="White"
+					BackgroundColor="{DynamicResource ColorButton}"
+					FontSize="15"/>
+
+			</StackLayout>
+
+	</ViewCell.View>
+
+</ViewCell>

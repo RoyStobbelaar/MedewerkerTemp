@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.ItemEditPage"
+	Title="Nieuw afspraak">
+
+	<ContentPage.Content>
+
+		<StackLayout
+			Spacing="0">
+
+    		<TableView
+    			HasUnevenRows="true">
+
+        		<TableView.Root>
+        			
+            		<TableSection>
+
+						<local:MCCWizardHeaderViewCell
+            				Text="Afspraak informatie"/>
+
+
+            				<!--Afspraak info-->
+            			<local:MCCDatePickerWithTitleViewCell
+            				Title="Datum"
+            				Date="{Binding Date}"/>
+
+            				<!--
+            			<local:MCCTimePickerWithTitleViewCell
+            				Title="Tijd"
+            				Time="{Binding Time}"/>
+            				-->
+
+            			<local:MCCEntryViewCell
+            				Title="Locatie"
+            				Value="{Binding Location}"
+            				Placeholder="Geef een locatie op"/>
+
+            			<local:MCCEntryViewCell
+            				Title="Commentaar"
+            				Value="{Binding Comment}"
+            				Placeholder="Voer het commentaar in"/>
+
+            				<!--Visitor info -->
+
+            			<local:MCCWizardHeaderViewCell
+            				Text="Bezoekers informatie"/>
+
+            			<local:MCCEntryViewCell
+            				Title="Voornaam"
+            				Value="{Binding VisitorFirstName}"
+            				Placeholder="Geef een voornaam op"/>
+
+
+            			<local:MCCEntryViewCell
+            				Title="Achternaam"
+            				Value="{Binding VisitorLastName}"
+            				Placeholder="Geef een achternaam op"/>
+
+            			<local:MCCEntryViewCell
+            				Title="Emailadres"
+            				Value="{Binding VisitorEmail}"
+            				Placeholder="Geef een emailadres op"/>
+
+            			<local:MCCEntryViewCell
+            				Title="Telefoonnummer"
+            				Value="{Binding VisitorPhone}"
+            				Placeholder="Geef een telefoonnummer op"/>
+
+            			<local:MCCEntryViewCell
+            				Title="Bedrijf"
+            				Value="{Binding VisitorCompany}"
+            				Placeholder="Geef een bedrijf op"/>
+
+            			<local:MCCWizardHeaderViewCell
+            				Text="Ophalers"/>
+
+            			<local:MCCSelectImageViewCell
+            				Title="Ophalers"
+            				PathToImage1="{Binding PathToImage1}"
+            				PathToImage2="{Binding PathToImage2}"
+            				PathToImage3="{Binding PathToImage3}"/>
+            			
+
+
+            				<!--
+            			<local:MCCSwitchViewCell
+            				Title="Actief *"
+            				Subtitle="Wachtwoord is actief"
+            				IsToggled="{Binding IsActive}" />
+
+            			<local:MCCDatePickerWithTitleViewCell
+            				Title="Account bestaat sinds *"
+            				Date="{Binding AccountSince}"/>
+
+            			<local:MCCSliderViewCell
+            				Title="Belangrijkheidsgraad (1 tot 10) *"
+            				Value="{Binding ImportanceLevel}" />
+
+            			<local:MCCPickerWithTitleViewCell
+            				Title="Categorie"
+            				Placeholder="Selecteer een categorie"
+            				Value="{Binding Category}"
+            				Items="{Binding CategoriesToChoose}"/>
+
+            			<local:MCCSelectImageViewCell
+            				Title="Foto selectie"
+            				PathToImage1="{Binding PathToImage1}"
+            				PathToImage2="{Binding PathToImage2}"
+            				PathToImage3="{Binding PathToImage3}"/>
+
+            			<local:MCCDescriptionWithImageViewCell
+            				Title="Locatie bepaling"
+            				Subtitle="Bepaal uw locatie of vul een locatie in"
+            				Command="{Binding SelectLocationCommand}"/>
+
+            			<local:MCCEntryWithoutTitleViewCell
+            				Placeholder="Locatie naam"
+            				Value="{Binding LocationName}"/>
+
+            			<local:MCCEntryWithoutTitleViewCell
+            				Placeholder="Adres"
+            				Value="{Binding LocationAddress}"/>
+
+            			<local:MCCEntryWithoutTitleViewCell
+            				Placeholder="Postcode, woonplaats"
+            				Value="{Binding LocationZipAndCity}"/>
+            				-->
+
+            			<local:MCCWizardFooterViewCell
+            				Text="Opslaan"
+            				Command="{Binding SaveCommand}"/>
+
+            		</TableSection>
+
+        		</TableView.Root>
+
+    		</TableView>
+
+    	</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

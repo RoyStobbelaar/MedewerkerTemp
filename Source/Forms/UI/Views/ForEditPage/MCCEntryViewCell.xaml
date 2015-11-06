@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCEntryViewCell"
+	x:Name="viewCell"
+	Height="60">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,3" 
+			RowSpacing="0" 
+			HorizontalOptions="Fill" 
+			VerticalOptions="Center"
+			BackgroundColor="White">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="30" />
+			</Grid.RowDefinitions>
+
+			<local:LabelBoldFont
+				Grid.Row="0"
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<local:EntryRegularFont
+				Grid.Row="1"
+				x:Name="_entryValue"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Value}"
+				Placeholder="{Binding Placeholder}"
+				TextColor="Black"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill" />
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

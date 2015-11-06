@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+	x:Class="MCCForms.LocationDeterminationPage"
+	BackgroundColor="{DynamicResource ColorPageBackground}"
+	x:Name="contentPage">
+
+	<ContentPage.Content>
+
+		<Grid
+			VerticalOptions="FillAndExpand"
+			HorizontalOptions="FillAndExpand">
+
+			<StackLayout
+				Padding="15"
+				VerticalOptions="Center"
+				HorizontalOptions="Center">
+
+				<local:LabelRegularFont
+					x:Name="labelProgress"
+					TextColor="Black"
+					FontSize="14"/>
+
+			</StackLayout>
+
+			<StackLayout
+				x:Name="mapViewContainer"
+				BackgroundColor="White"
+				IsVisible="false">
+
+	        	<maps:Map 
+	            	x:Name="MapView"
+	            	IsShowingUser="false"/>
+
+	        	<StackLayout
+					Padding="15"
+					VerticalOptions="Fill"
+					HorizontalOptions="Fill">
+
+		        	<local:LabelBoldFont
+		        		x:Name="labelLocationTitle"
+		        		Text="Uw locatie"
+						HorizontalOptions="Fill"
+						VerticalOptions="Fill"
+						YAlign="Center"
+						LineBreakMode="TailTruncation"
+						FontSize="14" />
+
+					<local:LabelRegularFont
+						x:Name="labelAddress"
+						Text="{Binding Address}"
+						HorizontalOptions="Fill"
+						VerticalOptions="Fill"
+						YAlign="Center"
+						LineBreakMode="TailTruncation"
+						FontSize="14"
+						TextColor="Gray" />
+
+					<local:LabelRegularFont
+						x:Name="labelZipcodeAndCity"
+						Text="{Binding ZipcodeAndCity}"
+						HorizontalOptions="Fill"
+						VerticalOptions="Fill"
+						YAlign="Center"
+						LineBreakMode="TailTruncation"
+						FontSize="14"
+						TextColor="Gray" />
+
+				</StackLayout>
+
+	   	 	</StackLayout>
+
+   	 	</Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>

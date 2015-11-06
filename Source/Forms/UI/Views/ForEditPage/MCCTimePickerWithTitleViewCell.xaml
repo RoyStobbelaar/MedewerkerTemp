@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:MCCBaseTitleViewCell
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.MCCTimePickerWithTitleViewCell"
+	x:Name="viewCell"
+	Height="60">
+
+	<local:MCCBaseTitleViewCell.View>
+
+		<Grid
+			Padding="15,7,15,7" 
+			RowSpacing="5" 
+			HorizontalOptions="Fill" 
+			VerticalOptions="Fill"
+			BackgroundColor="White">
+
+			<Grid.Resources>
+				<ResourceDictionary>
+        			<local:DateToNLStringFormatConverter x:Key="converter" />
+        		</ResourceDictionary>
+        	</Grid.Resources>
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="27" />
+			</Grid.ColumnDefinitions>
+
+			<local:LabelBoldFont
+				Grid.Row="0"
+				Grid.Column="0"
+				x:Name="labelTitle"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Title}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				LineBreakMode="TailTruncation"
+				FontSize="14" />
+
+			<local:LabelRegularFont
+				Grid.Row="1"
+				Grid.Column="0"
+				x:Name="labelDate"
+				BindingContext="{x:Reference viewCell}"
+				Text="{Binding Time, Converter={StaticResource converter}}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				YAlign="Center"
+				FontSize="14"
+				TextColor="Black" />
+
+			<TimePicker
+				x:Name="timePicker"
+				Grid.Row="1"
+				Grid.Column="0"
+				BindingContext="{x:Reference viewCell}"
+				Time="{Binding Time}"
+				HorizontalOptions="Fill"
+				VerticalOptions="Fill"
+				BackgroundColor="White"
+				IsVisible="false" />
+			
+			<Image
+				HorizontalOptions="Fill"
+				Source="datum.png"
+				BackgroundColor="Transparent"
+				Aspect="AspectFit"
+				Grid.Row="0"
+				Grid.Column="1"
+				Grid.RowSpan="2"/>
+
+		</Grid>
+
+	</local:MCCBaseTitleViewCell.View>
+
+</local:MCCBaseTitleViewCell>

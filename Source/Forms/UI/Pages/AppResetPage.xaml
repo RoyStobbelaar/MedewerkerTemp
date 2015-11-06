@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.AppResetPage"
+	BackgroundColor="{DynamicResource ColorPageBackground}">
+
+	<ContentPage.Content>
+
+		<StackLayout
+			Padding="0"
+			Spacing="0">
+
+			<!-- Header layout -->
+			<Grid
+				x:Name="gridBackground"
+			  	RowSpacing="0"
+			  	ColumnSpacing="0">
+			 	
+	    		<Grid.RowDefinitions>
+	      			<RowDefinition Height="65" />
+	      			<RowDefinition Height="*" />
+	    		</Grid.RowDefinitions>
+
+	    		<Grid.ColumnDefinitions>
+	      			<ColumnDefinition Width="*" />
+	    		</Grid.ColumnDefinitions>
+
+				<StackLayout 
+					Grid.Row="0" Grid.Column="0"
+					HorizontalOptions="FillAndExpand"
+					BackgroundColor="White">
+				
+					<StackLayout
+						VerticalOptions="FillAndExpand"
+						Padding = "20"
+						HorizontalOptions="Center"
+						Orientation="Horizontal"
+						WidthRequest="410">
+
+						<local:LabelRegularFont
+							x:Name="labelHeaderTitle"
+							Text="App Reset"
+	             			VerticalOptions="FillAndExpand"
+	             			HorizontalOptions="FillAndExpand"
+	             			XAlign="Start"
+	             			YAlign="Center"
+	             			FontSize="36"
+	             			TextColor="Black"/>
+
+	             		<local:NavigationInfoButtonLayout
+							x:Name="navigationButtonLayout"
+							VerticalOptions="FillAndExpand"
+							HorizontalOptions="Fill"/>
+
+					</StackLayout>
+
+				</StackLayout>
+
+			</Grid>
+
+			<StackLayout
+				Padding="20"
+				VerticalOptions="FillAndExpand"
+				HorizontalOptions="Center"
+				WidthRequest="410">
+
+				<local:LabelRegularFont
+					x:Name="labelInfo"
+					Text="{Binding MaxNumberOfLoginAttempts, StringFormat='U heeft {0} keer een foutieve pincode ingevoerd. Hierdoor is wegens veiligheidsredenen de app reset en is alle data verwijderd.'}"
+					TextColor="Black"
+					FontSize="14"/>
+
+			</StackLayout>
+
+			<StackLayout
+				Padding="20,20,20,25"
+				HorizontalOptions="Center"
+				WidthRequest="410"
+				VerticalOptions="End">
+
+				<Button
+					x:Name="buttonConfigureApp"
+					TextColor="White"
+					BackgroundColor="{DynamicResource ColorButton}"
+					HeightRequest="40"
+					FontSize="15"
+					Text="Configureer app opnieuw"
+					Command="{Binding OpenPincodePageCommand}"/>
+
+			</StackLayout>
+
+		</StackLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

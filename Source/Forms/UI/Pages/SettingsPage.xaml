@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:MCCForms;assembly=MCCForms"
+	x:Class="MCCForms.SettingsPage" 
+	Title="Instellingen"
+	BackgroundColor="{DynamicResource ColorPageBackground}">
+
+	<ContentPage.Content>
+
+			<Grid
+				Padding="15,15,15,20"
+				RowSpacing="15"
+				HorizontalOptions="FillAndExpand" 
+				VerticalOptions="FillAndExpand">
+
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="*" />
+					<RowDefinition Height="35" />
+				</Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*" />
+				</Grid.ColumnDefinitions>
+
+			<StackLayout
+					Grid.Row="0"
+					Grid.Column="0"
+					Spacing="7">
+
+				<local:LabelBoldFont
+					x:Name="labelOSTitle"
+					Text="Besturingssysteem"
+					HorizontalOptions="Fill"
+					VerticalOptions="Fill"
+					YAlign="Center"
+					FontSize="14" />
+				
+				<local:LabelRegularFont
+					x:Name="labelOS"
+					Text="{Binding OperatingSystem}"
+					HorizontalOptions="Fill"
+					VerticalOptions="Fill"
+					YAlign="Center"
+					FontSize="14" />
+			
+			</StackLayout>
+
+			<StackLayout
+				Grid.Row="1"
+				Grid.Column="0"
+				Spacing="7">
+
+				<local:LabelBoldFont
+					x:Name="labelAppVersionTitle"
+					Text="App versie"
+					HorizontalOptions="Fill"
+					VerticalOptions="Fill"
+					YAlign="Center"
+					FontSize="14" />
+				
+				<local:LabelRegularFont
+					x:Name="labelAppVersion"
+					Text="{Binding AppVersion}"
+					HorizontalOptions="Fill"
+					VerticalOptions="Fill"
+					YAlign="Center"
+					FontSize="14" />
+
+			</StackLayout>
+
+			<StackLayout
+				Grid.Row="2"
+				Grid.Column="0"
+				x:Name="layoutChangePincode">
+
+				<Button
+					x:Name="buttonChangePincode"
+					Text="Wijzig pincode"
+					Command="{Binding OpenPincodePageCommand}"
+					HorizontalOptions="Fill"
+					HeightRequest="35"
+					TextColor="White"
+					BackgroundColor="{DynamicResource ColorButton}"
+					FontSize="15"/>
+
+			</StackLayout>
+
+		</Grid>
+
+	</ContentPage.Content>
+
+</ContentPage>

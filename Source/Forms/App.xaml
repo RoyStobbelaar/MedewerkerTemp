@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application
+  	xmlns="http://xamarin.com/schemas/2014/forms"
+  	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="MCCForms.App">
+
+  	<Application.Resources>
+
+    	<ResourceDictionary> 
+
+    		<!-- the value for these dynamic resources are set within the App class and can be used in every xaml file-->
+    		<!-- example how to use in xaml: BackgroundColor="{DynamicResource ColorPageBackground}" -->
+    		<Color x:Key="ColorSecondToolbarBackground"></Color>
+    		<Color x:Key="ColorToolbarBackground"></Color>
+    		<Color x:Key="ColorPageBackground"></Color>
+    		<Color x:Key="ColorSearchbar"></Color>
+    		<Color x:Key="ColorButton"></Color>
+
+    	</ResourceDictionary>
+
+	</Application.Resources>
+
+</Application>
